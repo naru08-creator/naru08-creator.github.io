@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>プライバシーポリシー | naru08 creator</title>
-  <meta name="description" content="naruのプライバシーポリシー。Google AdSenseやCookieの利用について。">
+  <title>About | naru08 creator</title>
+  <meta name="description" content="naru08 creatorのAboutページ。サイトの目的、運営者情報、制作ポリシーについて。">
   <style>
     :root {
       --sky: #38bdf8;
@@ -109,17 +109,10 @@
       border-left: 4px solid var(--lime);
       padding-left: 12px;
     }
-    section p, section li {
+    section p {
       color: var(--text-muted);
       margin-bottom: 14px;
       line-height: 1.9;
-    }
-    section ul {
-      margin-left: 20px;
-      margin-bottom: 14px;
-    }
-    section li {
-      margin-bottom: 8px;
     }
     section a {
       color: #0ea5e9;
@@ -128,11 +121,59 @@
     section a:hover {
       color: #65a30d;
     }
-    .last-updated {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
+    .profile-box {
+      display: flex;
+      align-items: center;
+      gap: 20px;
       margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .profile-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sky), var(--lime));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.2);
+    }
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .profile-info h3 {
+      font-size: 1.15rem;
+      color: #14532d;
+      margin-bottom: 2px;
+    }
+    .profile-info p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .policy-list {
+      list-style: none;
+      padding: 0;
+    }
+    .policy-list li {
+      padding: 10px 0;
+      color: var(--text-muted);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+      padding-left: 28px;
+      position: relative;
+    }
+    .policy-list li:last-child {
+      border-bottom: none;
+    }
+    .policy-list li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
     }
 
     /* Footer */
@@ -172,8 +213,8 @@
 <body>
 
 <header>
-  <h1>プライバシーポリシー</h1>
-  <p>当サイトの情報収集と利用について</p>
+  <h1>About</h1>
+  <p>このサイトと運営者について</p>
 </header>
 
 <nav>
@@ -186,49 +227,53 @@
 
 <main>
 
-  <p class="last-updated">最終更新日: 2026年9月23日</p>
+  <section>
+    <div class="profile-box">
+      <div class="profile-avatar"><img src="Gemini_Generated_Image_lced53lced53lced.png" alt="naruのプロフィール画像"></div>
+      <div class="profile-info">
+        <h3>naru</h3>
+        <p>Web Creator / Tool Developer</p>
+      </div>
+    </div>
+    <p>
+          こんにちは、naruです。Webツールを作るのが好きなクリエイターです。
+          ぽこあポケモンが大好きで、「特技や好きな環境からポケモンを探せる」図鑑ツールを開発しました。
+        </p>
+        <p>
+        Webサイトを作るだけでなく、「こんな機能があったら便利そう」というアイデアを考え、実際に使える形にすることを楽しんでいます。
+情報を整理したり、検索や絞り込みなどの機能を組み合わせたりしながら、初めて使う人でも迷わず利用できるツールを目指しています。 </p>
+          <p><a href="https://note.com/naru08_creator" target="_blank" rel="noopener">note</a>で発信しています。</p> 
+  </section>
 
   <section>
-    <h2>はじめに</h2>
+    <h2>このサイトについて</h2>
     <p>
-      naru（以下、「当サイト」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。
-      本プライバシーポリシーでは、当サイトが取得する情報とその利用目的について説明します。
+      naruは、私が個人で制作したWebツール・コンテンツを紹介するポートフォリオサイトです。
+      「日常に役立つ、ちょっと便利なツール」を無料で公開することを目的としています。
+    </p>
+    <p>
+      現在公開中の「ぽこあポケモンデータ図鑑」は、ポケモンの特技・好きなもの・環境などの条件から
+      検索できる非公式データ図鑑です。ゲーム内の図鑑とは異なる切り口で、条件を組み合わせて絞り込めるのが特徴です。
     </p>
   </section>
 
   <section>
-    <h2>広告について</h2>
-    <p>
-      当サイトでは、第三者配信の広告サービス（Google AdSense）を利用する予定です。
-Googleなどの第三者配信事業者は、ユーザーの過去の当サイトや他のウェブサイトへのアクセス情報などに基づいて、興味に応じた広告を表示するためにCookieを使用する場合があります。
-    </p>
-    <p>
-    広告配信にあたって、Cookie、ウェブビーコン、IPアドレスなどの情報が利用される場合があります。これらの情報によって個人を特定するものではありません。
-      ユーザーは、<a href="https://adssettings.google.com" target="_blank" rel="noopener">Google広告設定</a>からパーソナライズ広告を無効にすることができます。
-    </p>
+    <h2>制作ポリシー</h2>
+    <ul class="policy-list">
+      <li>実用的で、誰でも無料で使えるツールを作る</li>
+      <li>データを整理し、分かりやすく役立つ情報として提供する</li>
+      <li>継続的に改善し、ユーザーのフィードバックを反映する</li>
+    </ul>
   </section>
 
   <section>
-    <h2>アクセス解析について</h2>
+    <h2>連絡先</h2>
     <p>
-      当サイトでは、サイトの利用状況を把握するため、Googleアナリティクス等を利用する場合があります。
-      これらのサービスはCookieを使用してアクセス情報を収集しますが、個人を特定する情報は収集しません。
+      作品に関するご質問・ご意見・バグ報告などがあれば、以下からお気軽にご連絡ください。
     </p>
-  </section>
-
-  <section>
-    <h2>免責事項</h2>
     <p>
-      当サイトのコンテンツや情報は、正確性を期すよう努めていますが、完全性や正確性を保証するものではありません。
-      当サイトを利用することで生じたいかなる損害についても、運営者は責任を負いかねます。
-    </p>
-  </section>
-
-  <section>
-    <h2>お問い合わせ</h2>
-    <p>
-      本ポリシーに関するご質問は、<a href="https://note.com/naru08_creator" target="_blank" rel="noopener">note</a>
-      または<a href="https://github.com/naru08-creator" target="_blank" rel="noopener">GitHub</a>よりお願いします。
+      <strong>GitHub:</strong> <a href="https://github.com/naru08-creator" target="_blank" rel="noopener">github.com/naru08-creator</a><br>
+      <strong>note:</strong> <a href="https://note.com/naru08_creator" target="_blank" rel="noopener">note.com/naru08_creator</a>
     </p>
   </section>
 
