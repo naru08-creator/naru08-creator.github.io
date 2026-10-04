@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>プライバシーポリシー | ぽこあポケモン図鑑</title>
+  <meta name="description" content="ぽこあポケモン図鑑ツールのプライバシーポリシー。広告、Cookie、アクセス解析、お問い合わせについて。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sky: #38bdf8;
+      --sky-light: #7dd3fc;
+      --grass: #86c95b;
+      --grass-dark: #4f9b43;
+      --green: #65a30d;
+      --pink: #f9a8d4;
+      --yellow: #fde68a;
+      --text: #3f5141;
+      --text-light: #6b7d6d;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(
+          180deg,
+          #bfeaff 0%,
+          #e8f8ff 45%,
+          #f7fff0 72%,
+          #dff2c8 100%
+        );
+      min-height: 100vh;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       Header
+    ========================= */
+
+    header {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 55px 20px 70px;
+    }
+
+    /* 太陽 */
+    .sun {
+      position: absolute;
+      width: 95px;
+      height: 95px;
+      background: #fde68a;
+      border-radius: 50%;
+      top: 25px;
+      right: 8%;
+      box-shadow: 0 0 35px rgba(253, 230, 138, 0.55);
+    }
+
+    /* 雲 */
+    .cloud {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50px;
+      width: 130px;
+      height: 42px;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 55px;
+      height: 55px;
+      left: 18px;
+      bottom: 8px;
+    }
+
+    .cloud::after {
+      width: 42px;
+      height: 42px;
+      left: 58px;
+      bottom: 10px;
+    }
+
+    .cloud-1 {
+      top: 55px;
+      left: 7%;
+    }
+
+    .cloud-2 {
+      top: 135px;
+      right: 15%;
+      transform: scale(0.7);
+      opacity: 0.75;
+    }
+
+    header .inner {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .title-small {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #5b8f52;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800;
+      color: #3f7d45;
+      letter-spacing: 0.04em;
+      text-shadow: 2px 3px 0 rgba(255,255,255,0.7);
+    }
+
+    .header-description {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #66806a;
+    }
+
+    /* =========================
+       Navigation
+    ========================= */
+
+    nav {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255,255,255,0.8);
+      border-bottom: 1px solid rgba(125, 180, 100, 0.15);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 7px 18px;
+      border-radius: 999px;
+      color: #5f765f;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background: #e8f7dc;
+      color: #4f963f;
+    }
+
+    /* =========================
+       Main
+    ========================= */
+
+    main {
+      width: min(900px, calc(100% - 30px));
+      margin: 0 auto;
+      padding: 45px 0 80px;
+    }
+
+    .updated {
+      text-align: center;
+      color: #789078;
+      font-size: 0.8rem;
+      margin-bottom: 25px;
+    }
+
+    section {
+      background: rgba(255,255,255,0.92);
+      border: 2px solid rgba(255,255,255,0.9);
+      border-radius: 24px;
+      padding: 30px;
+      margin-bottom: 22px;
+      box-shadow:
+        0 8px 25px rgba(91, 130, 80, 0.08);
+    }
+
+    section h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #4f8548;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    section h2::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #9bd66d;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    section p {
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    section ul {
+      margin: 10px 0 10px 22px;
+      color: var(--text-light);
+    }
+
+    section li {
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+
+    section a {
+      color: #299bd0;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: #b7e7f9;
+      text-underline-offset: 3px;
+    }
+
+    section a:hover {
+      color: #5b9e43;
+    }
+
+    /* =========================
+       Back button
+    ========================= */
+
+    .back-area {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .back-button {
+      display: inline-block;
+      background: #ffffff;
+      color: #5d8b55;
+      padding: 12px 30px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(91,130,80,0.12);
+      transition: 0.2s;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(91,130,80,0.18);
+    }
+
+    /* =========================
+       Grass / footer
+    ========================= */
+
+    footer {
+      position: relative;
+      background: linear-gradient(
+        180deg,
+        #cdebb4 0%,
+        #b8df9c 100%
+      );
+      text-align: center;
+      padding: 38px 20px 28px;
+      overflow: hidden;
+    }
+
+    .flowers {
+      font-size: 1.4rem;
+      letter-spacing: 15px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #52734f;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: #2f7538;
+    }
+
+    .copyright {
+      color: #698366;
+      font-size: 0.75rem;
+    }
+
+    /* =========================
+       Mobile
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 45px 18px 55px;
+      }
+
+      .sun {
+        width: 65px;
+        height: 65px;
+        right: 5%;
+        top: 20px;
+      }
+
+      .cloud-1 {
+        left: -30px;
+        transform: scale(0.7);
+      }
+
+      .cloud-2 {
+        right: -30px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .title-small {
+        font-size: 1rem;
+      }
+
+      nav {
+        padding: 9px 10px;
+      }
+
+      nav ul {
+        gap: 4px;
+      }
+
+      nav a {
+        padding: 6px 11px;
+        font-size: 0.78rem;
+      }
+
+      main {
+        width: calc(100% - 20px);
+        padding-top: 30px;
+      }
+
+      section {
+        padding: 23px 20px;
+        border-radius: 20px;
+      }
+
+      section h2 {
+        font-size: 1.05rem;
+      }
+
+      section p,
+      section li {
+        font-size: 0.88rem;
+      }
+
+      .footer-links {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="sun"></div>
+
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+
+  <div class="inner">
+    <p class="title-small">ぽこあ</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="header-description">
+      ぽこあポケモン図鑑ツールの情報収集と利用について
+    </p>
+  </div>
+
+</header>
+
+
+<nav>
+  <ul>
+    <li>
+      <a href="index.html">🏠 トップ</a>
+    </li>
+    <li>
+      <a href="https://naru08-creator.github.io/naru-pokopia-zukan/">
+        📖 図鑑を使う
+      </a>
+    </li>
+    <li>
+      <a href="howto.html">💡 使い方</a>
+    </li>
+  </ul>
+</nav>
+
+
+<main>
+
+  <p class="updated">
+    最終更新日：2026年10月4日
+  </p>
+
+
+  <section>
+    <h2>はじめに</h2>
+
+    <p>
+      naru（以下、「運営者」といいます。）が運営する
+      「ぽこあポケモン図鑑ツール」（以下、「当サイト」といいます。）では、
+      利用者のプライバシーを尊重し、個人情報の保護に努めています。
+    </p>
+
+    <p>
+      本プライバシーポリシーでは、当サイトにおける情報の取り扱いについて説明します。
+    </p>
+  </section>
+
+
+  <section>
+    <h2>広告について</h2>
+
+    <p>
+      当サイトでは、第三者配信の広告サービスである
+      Google AdSense（グーグルアドセンス）を利用しています。
+    </p>
+
+    <p>
+      Googleなどの第三者配信事業者は、利用者の過去の当サイトや
+      他のウェブサイトへのアクセス情報などに基づき、
+      利用者の興味や関心に応じた広告を表示するために
+      Cookieを使用する場合があります。
+    </p>
+
+    <p>
+      広告配信にあたって、Cookie、ウェブビーコン、IPアドレスなどの情報が
+      利用される場合がありますが、これらの情報によって
+      個人を特定するものではありません。
+    </p>
+
+    <p>
+      パーソナライズ広告を無効にしたい場合は、
+      <a
+        href="https://adssettings.google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google広告設定
+      </a>
+      から設定を変更することができます。
+    </p>
+  </section>
+
+
+  <section>
+    <h2>アクセス解析について</h2>
+
+    <p>
+      当サイトでは、サイトの利用状況を把握し、
+      より使いやすいサイトにするため、Googleアナリティクスを利用しています。
+    </p>
+
+    <p>
+      GoogleアナリティクスではCookieを利用してアクセス情報を収集する場合がありますが、
+      個人を特定する情報は収集していません。
+    </p>
+  </section>
+
+
+  <section>
+    <h2>Cookieについて</h2>
+
+    <p>
+      当サイトでは、広告配信やアクセス解析のためにCookieを使用する場合があります。
+    </p>
+
+    <p>
+      Cookieは、利用者のブラウザに保存される小さなデータであり、
+      ウェブサイトの利用状況の把握などに使用されます。
+    </p>
+
+    <p>
+      利用者は、ブラウザの設定からCookieを無効にすることができます。
+      ただし、Cookieを無効にした場合、一部のサービスが正常に利用できない場合があります。
+    </p>
+  </section>
+
+
+  <section>
+    <h2>当サイトのデータについて</h2>
+
+    <p>
+      当サイトは、ゲーム「Pokémon Pokopia（ポケモン ポコピア）」に
+      登場するポケモンの情報を検索しやすくするために、
+      個人で制作・運営している非公式のツールです。
+    </p>
+
+    <p>
+      当サイトは、ゲームの公式運営元・権利者とは関係ありません。
+    </p>
+
+    <p>
+      掲載している情報について、できる限り正確な内容となるよう努めていますが、
+      内容の完全性・正確性を保証するものではありません。
+    </p>
+  </section>
+
+
+  <section>
+    <h2>免責事項</h2>
+
+    <p>
+      当サイトに掲載されている情報については、できる限り正確な内容を
+      掲載するよう努めていますが、その正確性や完全性を保証するものではありません。
+    </p>
+
+    <p>
+      当サイトの利用によって生じた損害やトラブルについて、
+      運営者は一切の責任を負いかねます。
+    </p>
+  </section>
+
+
+  <section>
+    <h2>お問い合わせ</h2>
+
+    <p>
+      当サイトに関するご質問、不具合の報告などは、
+      以下のお問い合わせフォームからご連絡ください。
+    </p>
+
+    <p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdh3XOTs_igxl1ZQolkJJW62BNt4CoKgDt18-z3rZMKM019fw/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        → お問い合わせフォームはこちら
+      </a>
+    </p>
+  </section>
+
+
+  <div class="back-area">
+    <a class="back-button" href="index.html">
+      ← トップへ戻る
+    </a>
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="flowers">
+    🌼 🌱 🌷 🌱 🌼
+  </div>
+
+  <div class="footer-links">
+    <a href="index.html">トップ</a>
+    <a href="howto.html">使い方</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </div>
+
+  <p class="copyright">
+    © 2026 naru / ぽこあポケモン図鑑
+  </p>
+
+</footer>
+
+</body>
+</html>
